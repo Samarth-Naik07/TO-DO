@@ -19,7 +19,7 @@ export default function TaskDetails() {
 
   // Fetch single task
   useEffect(() => {
-    fetch(`http://localhost:5000/tasks/${id}`)
+    fetch(`https://to-do-po4f.onrender.com/tasks/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch task");
         return res.json();
@@ -36,7 +36,7 @@ export default function TaskDetails() {
   const handleUpdate = async () => {
     if (!id || !task) return;
     try {
-      const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+      const res = await fetch(`https://to-do-po4f.onrender.com/tasks/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 
@@ -60,7 +60,7 @@ export default function TaskDetails() {
   const confirmDelete = async () => {
     if (!id) return;
     try {
-      await fetch(`http://localhost:5000/tasks/${id}`, {
+      await fetch(`https://to-do-po4f.onrender.com/tasks/${id}`, {
         method: "DELETE",
       });
       navigate("/"); // redirect home after delete
@@ -74,7 +74,7 @@ export default function TaskDetails() {
     if (!id || !task) return;
     try {
       const updatedStatus = task.status === "Completed" ? "Pending" : "Completed";
-      const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+      const res = await fetch(`https://to-do-po4f.onrender.com/tasks/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 

@@ -19,7 +19,7 @@ const Home: React.FC = () => {
   const navigate = useNavigate(); 
 
   useEffect(() => {
-    fetch("http://localhost:5000/tasks") 
+    fetch("https://to-do-po4f.onrender.com/tasks") 
       .then((res) => res.json())
       .then((data) => {
         setTasks(data);

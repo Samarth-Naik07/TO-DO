@@ -1,1 +1,1 @@
-/// <reference types="todo" />
+/// <reference types="vite/client" />
