@@ -1,0 +1,70 @@
+body {
+  background: #2c2c2c;
+  font-family: "Poppins", sans-serif;
+}
+
+.addtask-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.addtask-heading {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.addtask-heading span {
+  color: #187bcd; /* blue like your screenshot */
+}
+
+.addtask-card {
+  background: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 350px;
+}
+
+.addtask-label {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.addtask-input,
+.addtask-textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.addtask-textarea {
+  height: 100px;
+  resize: none;
+}
+
+.addtask-btn {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.addtask-btn.add {
+  background-color: #187bcd; /* blue */
+}
+.addtask-btn.add:hover {
+  background-color: #0d5ea2;
+}

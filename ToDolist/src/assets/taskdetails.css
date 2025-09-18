@@ -1,0 +1,309 @@
+/* TaskDetails.css */
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  min-height: 100vh;
+  background: #3f3f3f;
+  font-family: "Arial Black", "Helvetica Bold";
+  font-weight: 900; 
+}
+
+.todo-heading {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.todo-heading span {
+  color: #4a9eff;
+}
+
+.todo-form {
+  background: transparent;
+  width: 500px;
+  max-width: 90%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.todo-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.finish-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.description-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.todo-label {
+  color:white;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.todo-label-checkmark{
+  color:white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.6;
+}
+
+.checkbox {
+  color: white;
+  width: 80px;
+  margin-bottom: 20px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+
+.checkbox.checked {
+  background:#3f3f3f ;
+}
+.non_checkmark {
+  font-size: 2.5rem;
+  color: #ccc;
+  font-weight: bold;
+  opacity: 0.3;
+}
+
+.checkmark {
+  font-size: 2.5rem;
+  color: green;
+  font-weight: bold;
+}
+
+.checkbox:hover {
+  transform: scale(1.05);
+}
+
+.todo-input {
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: #e8e8e8;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.todo-input:focus {
+  outline: none;
+  background: #f0f0f0;
+}
+
+.todo-textarea {
+  padding: 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background: #e8e8e8;
+  color: #333;
+  resize: vertical;
+  min-height: 150px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.todo-textarea:focus {
+  outline: none;
+  background: #f0f0f0;
+}
+
+.todo-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.update-btn {
+  background: #4a9eff;
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.update-btn:hover {
+  background: #3a8eef;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #ff3742;
+  transform: translateY(-2px);
+}
+
+/* Confirmation Popup */
+.confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.confirm-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 380px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  animation: popIn 0.25s ease-out;
+}
+
+.confirm-box p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #222;
+  font-weight: 500;
+}
+
+.confirm-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.confirm-btn {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.confirm-btn.yes {
+  background: #e63946;
+  color: #fff;
+  font-weight: 600;
+}
+
+.confirm-btn.no {
+  background: #6c757d;
+  color: #fff;
+  font-weight: 600;
+}
+
+.confirm-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .todo-heading {
+    font-size: 3rem;
+  }
+  
+  .todo-form {
+    width: 90%;
+  }
+  
+  .todo-row {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .checkbox {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .checkmark {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+  }
+  .todo-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .update-btn, .delete-btn, .add-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
+
+
+body {
+  background: #2e2e2e;
+ font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center everything horizontally */
+  padding: 40px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #1e90ff;
+}
+
+.task-list {
+  width: 100%;
+  max-width: 600px; /* keeps tasks centered */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.task-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background: white;
+  color: black;
+  border-radius: 30px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.status-icon {
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.status-icon.Completed {
+  color: green;
+}
+
+.status-icon.Pending {
+  color: gray;
+}
+
+.task-info {
+  flex:2;
+  text-align: left;
+  margin: 0%;
+  gap: 0px;
+  font-size: small;
+}
+
+
+
+
+.task-date {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 12px;
+  color: #777;
+}
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.view-all {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: white;
+  text-decoration: underline;
+}
+
+.add-btn {
+  display: inline-block;
+  background: #1e90ff;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.filter-container {
+  
+  font-style: normal;
+  margin-top: 20px;
+  text-align: right;
+  width: 100%;
+  max-width: 600px; /* keeps filter aligned with tasks */
+}
+
+.details-button {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+.task-info h4 {
+ margin-bottom: 2%;
+  font-size: 20px;
+  color: #252525;
+}
+.task-info p {
+  margin: 0 0 5px 0;
+  color: #464545;
+}
+
+@media (max-width: 600px) {
+  .task-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .task-date {
+    position: static;
+    margin-top: 5px;
+  }
+
+  .details-button {
+    align-self: flex-end;
+  }
+}
+
+
+
