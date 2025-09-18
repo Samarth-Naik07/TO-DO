@@ -1,7 +1,10 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
+import dotenv from "dotenv"; // ✅ import dotenv
 import taskRoutes from "./routes/taskRoutes.js";
+
+dotenv.config(); // ✅ load .env file
 
 const app = express();
 
@@ -13,11 +16,18 @@ app.use(express.json());
 app.use("/tasks", taskRoutes);
 
 // MongoDB connection
+const mongoUrl = process.env.MONGO_URL as string; // ✅ cast to string
+
+if (!mongoUrl) {
+  throw new Error("❌ MONGO_URL is not defined in .env file");
+}
+
 mongoose
-  .connect("mongodb://127.0.0.1:27017/todo-app")
+  .connect(mongoUrl)
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ MongoDB connection error:", err));
 
 // Start server
-const PORT = 5000;
+const PORT = process.env.PORT ;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
