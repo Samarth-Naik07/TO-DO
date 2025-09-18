@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./AddTask.css";
+import "./addTask.css";
 import { useNavigate } from "react-router";
 
 // Define type for Task
