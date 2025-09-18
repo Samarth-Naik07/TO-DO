@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import "./TaskDetails.css";
+import "./taskDetails.css";
 
 type Task = {
   _id: string;
