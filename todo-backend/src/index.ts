@@ -1,12 +1,12 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-<<<<<<< HEAD
-import dotenv from "dotenv"; // ✅ import dotenv
-=======
-import * as dotenv from "dotenv"
 
->>>>>>> 9994d4b4cfb27595921c952439f277d041ed0b55
+import dotenv from "dotenv"; // ✅ import dotenv
+
+
+
+
 import taskRoutes from "./routes/taskRoutes.js";
 
 dotenv.config(); // ✅ load .env file
