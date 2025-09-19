@@ -73,7 +73,6 @@ Full Stack Developer 🚀
 - 
 
 
-## live demo
 
 ## Live Demo
 - Frontend (Netlify): [https://todo-samarth.netlify.app/](https://todo-samarth.netlify.app/)
